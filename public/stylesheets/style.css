@@ -1,0 +1,454 @@
+@charset "UTF-8";
+/** @format */
+/** @format */
+/* ==========================================================================
+   COLORS / SETTINGS
+   ========================================================================== */
+.text-primary {
+  color: #8768ae !important;
+}
+
+.text-secondary {
+  color: #ffaa87 !important;
+}
+
+.text-dark {
+  color: #323232 !important;
+}
+
+.bg-dark {
+  color: #323232 !important;
+}
+
+.bg-secondary {
+  background-color: #ffaa87 !important;
+}
+
+.bg-white-2 {
+  background-color: #efefef !important;
+}
+
+.bg-tertiary {
+  background-color: #fadfd3 !important;
+}
+
+.bg-primary {
+  background-color: #8768ae !important;
+}
+
+.bg-top-bottom-grad {
+  background-image: linear-gradient(#8768ae, #ffaa87);
+}
+
+.bg-left-right-grad {
+  background-image: linear-gradient(to right, #8768ae, #ffaa87);
+}
+
+/**
+ * ==========================================================================
+ *    FONTS / SETTINGS
+ *    ==========================================================================
+ *
+ * @format
+ */
+/**
+ * ==========================================================================
+ *    #GENERIC
+ *    ==========================================================================
+ *
+ * @format
+ */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #323232;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.form-control {
+  outline: none;
+  border: none;
+}
+.form-control:focus,
+.form-control :active,
+.form-control :hover,
+.form-control :focus-within,
+.form-control :focus-visible,
+.form-control :visited {
+  color: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: none !important;
+}
+
+@media (min-width: 1920px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1620px;
+  }
+}
+/**
+ * ==========================================================================
+ *      BODY / ELEMENT
+ *    ==========================================================================
+ *
+ * @format
+ */
+body {
+  color: #323232 !important;
+  font-size: 1rem;
+  background: #fadfd3;
+  font-family: "Montserrat", sans-serif;
+}
+
+/**
+ * ==========================================================================
+ *    HEADINGS / ELEMENT
+ *    ==========================================================================
+ *
+ * @format
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 0.875rem;
+  margin-bottom: 0 !important;
+}
+
+/**
+ * ==========================================================================
+ *    #BUTTONS
+ *    ==========================================================================
+ *
+ * @format
+ */
+.c-btn {
+  display: inline-block;
+  vertical-align: middle;
+  font: inherit;
+  text-align: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Style variants
+   ========================================================================== */
+.c-btn-primary {
+  border: none;
+  height: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #ffaa87;
+  font-size: 1.25rem;
+  background-color: #8768ae !important;
+}
+.c-btn-primary:active, .c-btn-primary:hover, .c-btn-primary:active, .c-btn-primary:focus {
+  border: none;
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: rgba(135, 104, 174, 0.9) !important;
+}
+
+.c-btn-secondary {
+  background-color: #2f4054;
+}
+.c-btn-secondary, .c-btn-secondary:hover, .c-btn-secondary:active, .c-btn-secondary:focus {
+  text-decoration: none;
+  color: #fff;
+}
+.c-btn-secondary:hover, .c-btn-secondary:focus {
+  background-color: #1d2733;
+}
+
+.c-btn-tertiary {
+  background-color: #fff;
+  color: #4a8ec2;
+}
+.c-btn-tertiary, .c-btn-tertiary:hover, .c-btn-tertiary:active, .c-btn-tertiary:focus {
+  text-decoration: none;
+  color: #4a8ec2;
+}
+.c-btn-tertiary:hover, .c-btn-tertiary:focus {
+  color: #3774a2;
+}
+
+/** @format */
+/* ==========================================================================
+   Home / pages
+   ========================================================================== */
+/** @format */
+.navbar .navbar-nav .nav-item .badge {
+  top: 5px !important;
+  border: 1px solid #323232;
+}
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #323232;
+  font-size: 1.125rem;
+}
+
+/**
+ * ==========================================================================
+ *    LOGIN / pages
+ *    ==========================================================================
+ *
+ * @format
+ */
+.login__content-input .form-control {
+  height: 50px;
+  width: 325px;
+}
+.login__content-checkbox .form-check input[type=checkbox] {
+  display: none;
+}
+.login__content-checkbox .form-check input[type=checkbox] + span {
+  display: inline-block;
+  position: relative;
+}
+.login__content-checkbox .form-check input[type=checkbox] + span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  left: -35px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #8768ae;
+  background-color: #8768ae;
+}
+.login__content-checkbox .form-check input[type=checkbox]:checked + span:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #ffaa87;
+  left: -30px;
+  top: 50%;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.login__content-checkbox .form-check input[type=radio]:checked + span:after {
+  border-radius: 50%;
+  -khtml-border-radius: 50%;
+}
+/** @format */
+/* ==========================================================================
+   coaching-list / pages
+   ========================================================================== */
+#list-hero {
+  height: 100vh;
+}
+#list-hero .list-hero .left {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: gainsboro;
+}
+#list-hero .list-hero .left .profile {
+  position: relative;
+  text-align: center;
+}
+#list-hero .list-hero .left .profile .icone {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+#list-hero .list-hero .left .profile .icone .div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#list-hero .list-hero .left .profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#list-hero .list-hero .left .profile .p1 {
+  font-weight: bold;
+}
+#list-hero .list-hero .left .profile .p3 {
+  font-weight: bold;
+}
+#list-hero .list-hero .left .div .présentation {
+  border-radius: 10px;
+}
+#list-hero .list-hero .left .div .présentation h5 {
+  margin-bottom: 10px;
+}
+#list-hero .list-hero .left .div .spécialités {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+#list-hero .list-hero .left .div .spécialités h5 {
+  margin-bottom: 10px;
+}
+#list-hero .list-hero .left .div .spécialités p {
+  padding: 2px 20px 5px 20px;
+  display: inline-block;
+  border-radius: 50px;
+  margin: 10px 0;
+}
+#list-hero .list-hero .left .img {
+  text-align: center;
+  padding: 20px 0;
+}
+#list-hero .list-hero .right {
+  border-radius: 20px;
+  height: 100%;
+  background-color: gray;
+}
+#list-hero .list-hero .right .head {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#list-hero .list-hero .right .head p {
+  display: inline-block;
+}
+#list-hero .list-hero .right .head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#list-hero .list-hero .right .head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#list-hero .list-hero .right .coaching-list {
+  height: 100%;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item {
+  background-color: rgb(234, 234, 234);
+  padding: 10px 50px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item ::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  content: "";
+}
+#list-hero .list-hero .right .coaching-list .coaching-item:hover ::after {
+  background: rgba(0, 0, 0, 0.03);
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .img {
+  background-color: rgb(234, 234, 234);
+  align-items: center;
+  padding: 10px 0;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .img .img-text {
+  margin-left: 20px;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .img h5 span {
+  font-size: 14px;
+  font-weight: 400;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .img .text-icone {
+  align-items: center;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .img .text-icone i {
+  padding: 5px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .text {
+  padding: 5px 20px;
+  background-color: rgb(244, 244, 244);
+  border-radius: 10px;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .text .icone {
+  margin-right: 20px;
+  margin-top: 10px;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .text .icone i {
+  padding: 5px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+#list-hero .list-hero .right .coaching-list .coaching-item .text .text-right p span {
+  font-weight: bold;
+}
+
+/** @format */
+/* ==========================================================================
+   coaching-chat / pages
+   ========================================================================== */
+/** @format */
+/* ==========================================================================
+   coaching-calendrier / pages
+   ========================================================================== *//*# sourceMappingURL=style.css.map */

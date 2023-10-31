@@ -1,0 +1,176 @@
+/** @format */
+
+/* ==========================================================================
+   coaching-list / pages
+   ========================================================================== */
+   #list-hero{
+      height: 100vh;
+      .list-hero{
+         // left css
+         .left{
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-color:gainsboro;
+            .profile{
+               position: relative;
+               .icone{
+                  position: absolute;
+                  top: 20px;
+                  right: 20px;
+                  display: flex;
+                  .div{
+                     width: 30px;
+                     height: 30px;
+                     text-align: center;
+                     line-height: 30px;
+                     margin: 0 5px;
+                     cursor: pointer;
+                  }
+               }
+               img{
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 50%;
+                  object-fit: cover;
+               }
+               text-align: center;
+               .p1{
+                  font-weight: bold;
+               }
+               .p3{
+                  font-weight: bold;
+                  
+               }
+               
+            }
+            .div{
+               .présentation{
+                  border-radius: 10px;
+                  h5{
+                     margin-bottom: 10px;
+                  }
+               }
+               .spécialités{
+                  margin-top: 10px;
+                  border-radius: 10px;
+                  h5{
+                     margin-bottom: 10px;
+                  }
+                  p{
+                     padding: 2px 20px 5px 20px;
+                     display: inline-block;
+                     border-radius: 50px;
+                     margin: 10px 0;
+                  }
+               }
+            }
+            .img{
+               text-align: center;
+               padding: 20px 0;
+            }
+         }
+         // right css
+         .right{
+            border-radius: 20px;
+            height: 100%;
+            background-color: gray;
+            .head{
+               padding:10px;
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               p{
+                  display: inline-block;
+               }
+               .number{
+                  width: 30px;
+                  height: 30px;
+                  text-align: center;
+                  line-height: 30px;
+                  border-radius: 50%;
+                  margin-right: 10px;
+
+               }
+               i{
+                  width: 30px;
+                  height: 30px;
+                  text-align: center;
+                  line-height: 30px;
+                  background-color: wheat;
+                  border-radius: 50px;
+                  font-size: 14px;
+               }
+            }
+            .coaching-list{
+               height: 100%;
+               .coaching-item{
+                  background-color: rgb(234, 234, 234);
+                  padding:10px 50px;
+                  position: relative;
+                  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                  ::after{
+                     position: absolute;
+                     top: 0;
+                     left: 0;
+                     width: 100%;
+                     height: 100%;
+                     background-color:transparent;
+                     content: '';
+                  }
+                  &:hover ::after{
+                     background: rgba(0, 0, 0, 0.030);
+                  }
+                  .img{
+                     background-color: rgb(234, 234, 234);
+                     align-items: center;
+                     padding: 10px 0;
+                     img{
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                     }
+                     .img-text{
+                        margin-left: 20px;
+                     }
+                     h5{
+                        span{
+                           font-size: 14px;
+                           font-weight: 400;
+                        }
+                     }
+                     .text-icone{
+                        align-items: center;
+                        i{
+                           padding: 5px;
+                           border-radius: 50px;
+                           margin-right: 5px;
+                        }
+                     }
+                  }
+                  .text{
+                     padding: 5px 20px;
+                     background-color:rgb(244, 244, 244) ;
+                     border-radius: 10px;
+                     .icone{
+                        margin-right: 20px;
+                        margin-top: 10px;
+                        i{
+                           padding: 5px;
+                           border-radius: 50px;
+                           margin-right: 5px;
+                        }
+                     }
+                     .text-right{
+                        p{
+                           span{
+                              font-weight: bold;
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
