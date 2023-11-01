@@ -40,6 +40,10 @@
   background-image: linear-gradient(#8768ae, #ffaa87);
 }
 
+.bg-bottom-top-grad {
+  background-image: linear-gradient(#ffaa87, #8768ae);
+}
+
 .bg-left-right-grad {
   background-image: linear-gradient(to right, #8768ae, #ffaa87);
 }
@@ -291,7 +295,8 @@ p {
 #list-hero .list-hero .left {
   box-sizing: border-box;
   border-radius: 20px;
-  background-color: gainsboro;
+  background-color: #efefef;
+  overflow: hidden;
 }
 #list-hero .list-hero .left .profile {
   position: relative;
@@ -345,12 +350,13 @@ p {
 }
 #list-hero .list-hero .left .img {
   text-align: center;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 #list-hero .list-hero .right {
   border-radius: 20px;
   height: 100%;
-  background-color: gainsboro;
+  background-color: #efefef;
+  overflow: hidden;
 }
 #list-hero .list-hero .right .head {
   padding: 10px;
@@ -400,7 +406,7 @@ p {
   background: rgba(0, 0, 0, 0.03);
 }
 #list-hero .list-hero .right .coaching-list .coaching-item .img {
-  background-color: rgb(234, 234, 234);
+  background-color: transparent;
   align-items: center;
   padding: 10px 0;
 }
@@ -446,9 +452,909 @@ p {
 
 /** @format */
 /* ==========================================================================
-   coaching-chat / pages
+   coaching-list / pages
    ========================================================================== */
+#hero {
+  height: 100vh;
+}
+#hero .hero .left {
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#hero .hero .left .profile {
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+}
+#hero .hero .left .profile .icone {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+#hero .hero .left .profile .icone .div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#hero .hero .left .profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#hero .hero .left .profile .p1 {
+  font-weight: bold;
+}
+#hero .hero .left .profile .p3 {
+  font-weight: bold;
+}
+#hero .hero .left .img {
+  text-align: center;
+  padding: 40px 0;
+}
+#hero .hero .right {
+  border-radius: 20px;
+  height: 100vh;
+  background-color: #efefef;
+  overflow: hidden;
+}
+#hero .hero .right .head {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffaa87;
+}
+#hero .hero .right .head p {
+  display: inline-block;
+}
+#hero .hero .right .head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#hero .hero .right .head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#hero .hero .right .second-head {
+  padding: 12px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero .hero .right .second-head p {
+  display: inline-block;
+}
+#hero .hero .right .second-head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#hero .hero .right .second-head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#hero .hero .right .second-head .date-colorBold {
+  font-weight: bold;
+}
+#hero .hero .right .review-msg {
+  padding: 12px 60px;
+}
+#hero .hero .right .review-msg label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#hero .hero .right .review-msg .metuted-icon input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#hero .hero .right .review-msg .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#hero .hero .right .review-des {
+  background-color: #F4F4F4;
+  padding: 12px 60px;
+}
+#hero .hero .right .review-des label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#hero .hero .right .review-des .metuted-icon textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#hero .hero .right .review-des .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#hero .hero .right .review-btn {
+  background-color: #F4F4F4;
+  padding: 20px 60px;
+}
+#hero .hero .right .review-btn .c-btn-1 {
+  background-color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+#hero .hero .right .review-btn .c-btn-2 {
+  background-color: #323232;
+  color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+#hero .hero .chat-box {
+  height: 100vh;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#hero .hero .chat-box .chat-list {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #323232;
+}
+#hero .hero .chat-box .chat-list .message {
+  align-items: center;
+  margin: 10px 0;
+}
+#hero .hero .chat-box .chat-list .message img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+#hero .hero .chat-box .chat-list .message div span {
+  font-size: 12px;
+}
+#hero .hero .chat-box .chat-list .message div p {
+  padding: 5px 10px;
+  background-color: #efefef;
+  border-radius: 20px;
+}
+#hero .hero .chat-box .search .input {
+  position: relative;
+}
+#hero .hero .chat-box .search .input input {
+  width: 100%;
+  padding: 3px 20px;
+  border: none;
+}
+#hero .hero .chat-box .search .input i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
 /** @format */
 /* ==========================================================================
-   coaching-calendrier / pages
-   ========================================================================== *//*# sourceMappingURL=style.css.map */
+   coaching-list / pages
+   ========================================================================== */
+#hero {
+  height: 100vh;
+}
+#hero .hero .left {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+#hero .hero .left .profile {
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+}
+#hero .hero .left .profile .icone {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+#hero .hero .left .profile .icone .div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#hero .hero .left .profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#hero .hero .left .profile .p1 {
+  font-weight: bold;
+}
+#hero .hero .left .profile .p3 {
+  font-weight: bold;
+}
+#hero .hero .left .img {
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+}
+#hero .hero .right {
+  border-radius: 20px;
+  height: 100%;
+  background-color: #F4F4F4;
+  overflow: hidden;
+}
+#hero .hero .right .head {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffaa87;
+}
+#hero .hero .right .head p {
+  display: inline-block;
+}
+#hero .hero .right .head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#hero .hero .right .head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#hero .hero .right .second-head {
+  padding: 12px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero .hero .right .second-head p {
+  display: inline-block;
+}
+#hero .hero .right .second-head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#hero .hero .right .second-head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#hero .hero .right .second-head .date-colorBold {
+  font-weight: bold;
+}
+#hero .hero .right .review-msg {
+  padding: 12px 60px;
+}
+#hero .hero .right .review-msg label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#hero .hero .right .review-msg .metuted-icon input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#hero .hero .right .review-msg .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#hero .hero .right .review-des {
+  background-color: #F4F4F4;
+  padding: 12px 60px;
+}
+#hero .hero .right .review-des label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#hero .hero .right .review-des .metuted-icon textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#hero .hero .right .review-des .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#hero .hero .right .review-btn {
+  background-color: #F4F4F4;
+  padding: 20px 60px;
+}
+#hero .hero .right .review-btn .c-btn-1 {
+  background-color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+#hero .hero .right .review-btn .c-btn-2 {
+  background-color: #323232;
+  color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+#hero .hero .chat-box {
+  height: 100vh;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+}
+#hero .hero .chat-box .chat-list {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #323232;
+}
+#hero .hero .chat-box .chat-list .message {
+  align-items: center;
+  margin: 10px 0;
+}
+#hero .hero .chat-box .chat-list .message img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+#hero .hero .chat-box .chat-list .message div span {
+  font-size: 12px;
+}
+#hero .hero .chat-box .chat-list .message div p {
+  padding: 5px 10px;
+  background-color: #efefef;
+  border-radius: 20px;
+}
+#hero .hero .chat-box .search .input {
+  position: relative;
+}
+#hero .hero .chat-box .search .input input {
+  width: 100%;
+  padding: 3px 20px;
+  border: none;
+}
+#hero .hero .chat-box .search .input i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/** @format */
+/* ==========================================================================
+   coaching-list / pages
+   ========================================================================== */
+#post-valider {
+  height: 100vh;
+}
+#post-valider .hero .left {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+#post-valider .hero .left .profile {
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+}
+#post-valider .hero .left .profile .icone {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+#post-valider .hero .left .profile .icone .div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#post-valider .hero .left .profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#post-valider .hero .left .profile .p1 {
+  font-weight: bold;
+}
+#post-valider .hero .left .profile .p3 {
+  font-weight: bold;
+}
+#post-valider .hero .left .img {
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+}
+#post-valider .hero .right {
+  border-radius: 20px;
+  height: 100%;
+  background-color: #efefef;
+}
+#post-valider .hero .right .head {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffaa87;
+}
+#post-valider .hero .right .head p {
+  display: inline-block;
+}
+#post-valider .hero .right .head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#post-valider .hero .right .head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#post-valider .hero .right .second-head {
+  padding: 12px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#post-valider .hero .right .second-head p {
+  display: inline-block;
+}
+#post-valider .hero .right .second-head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#post-valider .hero .right .second-head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#post-valider .hero .right .second-head .date-colorBold {
+  font-weight: bold;
+}
+#post-valider .hero .right .review-msg {
+  padding: 12px 60px;
+}
+#post-valider .hero .right .review-msg label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#post-valider .hero .right .review-msg .metuted-icon input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#post-valider .hero .right .review-msg .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#post-valider .hero .right .review-des {
+  background-color: #F4F4F4;
+  padding: 12px 60px;
+}
+#post-valider .hero .right .review-des label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#post-valider .hero .right .review-des .metuted-icon textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#post-valider .hero .right .review-des .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#post-valider .hero .right .review-btn {
+  background-color: #F4F4F4;
+  padding: 20px 60px;
+}
+#post-valider .hero .right .review-btn .c-btn-1 {
+  background-color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+#post-valider .hero .right .review-btn .c-btn-2 {
+  background-color: #323232;
+  color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+#post-valider .hero .right .valider-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 60px;
+}
+#post-valider .hero .chat-box {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#post-valider .hero .chat-box .chat-list {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #323232;
+}
+#post-valider .hero .chat-box .chat-list .message {
+  align-items: center;
+  margin: 10px 0;
+}
+#post-valider .hero .chat-box .chat-list .message img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+#post-valider .hero .chat-box .chat-list .message div span {
+  font-size: 12px;
+}
+#post-valider .hero .chat-box .chat-list .message div p {
+  padding: 5px 10px;
+  background-color: #efefef;
+  border-radius: 20px;
+}
+#post-valider .hero .chat-box .search .input {
+  position: relative;
+}
+#post-valider .hero .chat-box .search .input input {
+  width: 100%;
+  padding: 3px 20px;
+  border: none;
+}
+#post-valider .hero .chat-box .search .input i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/** @format */
+/* ==========================================================================
+   coaching-list / pages
+   ========================================================================== */
+#post-valider {
+  height: 100vh;
+}
+#post-valider .list-hero .left {
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+#post-valider .list-hero .left .profile {
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+}
+#post-valider .list-hero .left .profile .icone {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+#post-valider .list-hero .left .profile .icone .div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#post-valider .list-hero .left .profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#post-valider .list-hero .left .profile .p1 {
+  font-weight: bold;
+}
+#post-valider .list-hero .left .profile .p3 {
+  font-weight: bold;
+}
+#post-valider .list-hero .left .img {
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+}
+#post-valider .list-hero .right {
+  border-radius: 20px;
+  height: 100%;
+  background-color: #F4F4F4;
+  overflow: hidden;
+}
+#post-valider .list-hero .right .head {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffaa87;
+}
+#post-valider .list-hero .right .head p {
+  display: inline-block;
+}
+#post-valider .list-hero .right .head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#post-valider .list-hero .right .head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#post-valider .list-hero .right .second-head {
+  padding: 12px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#post-valider .list-hero .right .second-head p {
+  display: inline-block;
+}
+#post-valider .list-hero .right .second-head .number {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#post-valider .list-hero .right .second-head i {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: wheat;
+  border-radius: 50px;
+  font-size: 14px;
+}
+#post-valider .list-hero .right .second-head .date-colorBold {
+  font-weight: bold;
+}
+#post-valider .list-hero .right .review-msg {
+  padding: 12px 60px;
+}
+#post-valider .list-hero .right .review-msg label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#post-valider .list-hero .right .review-msg .metuted-icon input {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#post-valider .list-hero .right .review-msg .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#post-valider .list-hero .right .review-des {
+  background-color: #F4F4F4;
+  padding: 12px 60px;
+}
+#post-valider .list-hero .right .review-des label {
+  font-size: 12px;
+  font-weight: bold;
+}
+#post-valider .list-hero .right .review-des .metuted-icon textarea {
+  resize: none;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  border: none;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+}
+#post-valider .list-hero .right .review-des .metuted-icon .fa-xmark {
+  position: relative;
+  top: -29px;
+  right: -475px;
+}
+#post-valider .list-hero .right .review-btn {
+  background-color: #F4F4F4;
+  padding: 20px 60px;
+}
+#post-valider .list-hero .right .review-btn .c-btn-1 {
+  background-color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+#post-valider .list-hero .right .review-btn .c-btn-2 {
+  background-color: #323232;
+  color: #ffaa87;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border-radius: 4px;
+}
+#post-valider .list-hero .right .valider-btn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 60px;
+}
+#post-valider .list-hero .chat-box {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#post-valider .list-hero .chat-box .chat-list {
+  width: 100%;
+  height: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #323232;
+}
+#post-valider .list-hero .chat-box .chat-list .message {
+  align-items: center;
+  margin: 10px 0;
+}
+#post-valider .list-hero .chat-box .chat-list .message img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+#post-valider .list-hero .chat-box .chat-list .message div span {
+  font-size: 12px;
+}
+#post-valider .list-hero .chat-box .chat-list .message div p {
+  padding: 5px 10px;
+  background-color: #efefef;
+  border-radius: 20px;
+}
+#post-valider .list-hero .chat-box .search .input {
+  position: relative;
+}
+#post-valider .list-hero .chat-box .search .input input {
+  width: 100%;
+  padding: 3px 20px;
+  border: none;
+}
+#post-valider .list-hero .chat-box .search .input i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=style.css.map */

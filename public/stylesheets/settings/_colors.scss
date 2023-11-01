@@ -42,6 +42,9 @@ $dark-color-3: rgba($dark, 0.3);
 .bg-top-bottom-grad {
   background-image: linear-gradient($primary-color,$secondary-color);
 }
+.bg-bottom-top-grad {
+  background-image: linear-gradient($secondary-color,$primary-color);
+}
 .bg-left-right-grad {
   background-image: linear-gradient(to right, $primary-color , $secondary-color);
 }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUGO | Ressources Humanisees</title>
+    <!--  bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- google font Montserrat  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <!-- custom stylesheet link  -->
+    <link rel="stylesheet" href="./stylesheets/all.min.css" />
+    <link rel="stylesheet" href="./stylesheets/style.css" />
+</head>
+<body>
+    
+<!-- navbar part html start  -->
+<nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container-fluid px-lg-5">
+      <a class="navbar-brand" href="#"><img src="./img/logos/nav-logo.png" alt="logo.png" class="img-fluid" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-lg-4" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Proﬁl</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Rendez-vous</a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="nav-link" href="#">Calendrier</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item px-3 d-flex align-items-center">
+            <a class="position-relative" href="#">
+              <img src="./img/nav-icon/ball-icon.png" alt="ball-icon.png" class="img-fluid" />
+              <span class="position-absolute top-0 start-100 translate-middle text-dark badge rounded-circle bg-secondary p-1">
+                12
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item px-3">
+            <a class="d-flex align-items-center" href="#">
+              <img src="./img/nav-icon/nav-profile-icon.png" alt="profile-icon" class="img-fluid rounded-circle" />
+              <div class="profile-icon ms-3">
+                <h6 class="fw-normal text-dark">DUPONT</h6>
+                <p class="fw-normal mb-0 text-dark">Jean-Claude</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar part html end  -->
+  <!-- valider part html start  -->
+  <section id="post-valider">
+    <div class="container">
+      <div class="list-hero p-3 mt-5">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="left">
+              <div class="profile bg-top-bottom-grad py-5">
+                <div class="icone">
+                  <div class="bg-tertiary rounded-circle div">
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                  <div class="bg-tertiary rounded-circle div">
+                    <i class="fa-solid fa-pen"></i>
+                  </div>
+                </div>
+                <img src="./img/profile-icon/profile-icon.png" alt="img">
+                <p class="text-white mt-3 p1">Dupont</p>
+                <p class="text-white">Jean-Claude</p>
+                <p class="text-primarys p3">Coach Certifié</p>
+              </div>
+              <div class="profile bg-top-bottom-grad py-5">
+                <div class="icone">
+                  <div class="bg-tertiary rounded-circle div">
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                  <div class="bg-tertiary rounded-circle div">
+                    <i class="fa-solid fa-pen"></i>
+                  </div>
+                </div>
+                <img src="./img/profile-icon/profile-icon.png" alt="img">
+                <p class="text-white mt-3 p1">Dupont</p>
+                <p class="text-white">Jean-Claude</p>
+                <p class="text-primarys p3">Coach Certifié</p>
+              </div>
+              <div class="img">
+                <img src="./img/logos/logo.png" alt="logo">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="right">
+              <div class="head bg-left-right-grad">
+                <div class="">
+                  <p class="number bg-secondary"><i class="fa-solid fa-bars bg-secondary"></i></p>
+                  <p class="text-white">Séance de <span class="text-secondary">Coaching</span></p>
+                </div>
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="second-head bg-primary">
+                <div class="valier-icon">
+                  <img class="valider-iconImg" src="./img/profile-icon/valider-icon.png" alt="">
+                  <p class="text-white">À Valider</p>
+                </div>
+              </div>
+              <div class="review-msg bg-white-2">
+                <div class="msg-title bg-white-2">
+                  <label for="#">Titre de la séance</label><br>
+                  <div class="metuted-icon">
+                    <input type="text" placeholder="Séance 3">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="review-des">
+                <div class="msg-title">
+                  <label for="#">Description</label><br>
+                  <div class="metuted-icon">
+                    <textarea placeholder="Qu’ai-je accompli depuis la dernière séance ? Mes victoires, mes points à travailler. Qu’est ce qui a été amé liorer et comment mettre ces outils à profit au sein de mon entreprise."></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="review-msg bg-white-2">
+                <div class="msg-title bg-white-2">
+                  <label for="#">Lien Visio</label><br>
+                  <div class="metuted-icon">
+                    <input type="text" placeholder="http://www.zoom.com/?d=9fd90fdf">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="second-head bg-primary">
+                  <p class="text-white">Planification</p>
+              </div>
+              <div class="second-head bg-white">
+                  <p class="text-dark">Prévue dans 3 jours, le <span class="date-colorBold"> 29/09/2023 </span>à 10h30</p>
+              </div>
+              <div class="second-head bg-secondary">
+                <p class="text-dark">Validation</p>
+            </div>
+              <div class="review-btn valider-btn bg-white-2">
+                <p>La séance a-t-elle bien eu lieu ?</p>
+                <div>
+                    <button class="c-btn-1">OUI</button>
+                    <button class="c-btn-2">NON</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="chat-box bg-white ">
+              <div class="chat-head bg-primary p-3">
+                <h5 class="text-white">Chat - <span class="text-secondary">MONTAIGNE</span> Sophie</h5>
+              </div>
+              <div class="chat-list bg-white">
+                  <div class="message d-flex">
+                    <img src="./img/nav-icon/nav-profile-icon.png" alt="img">
+                    <div>
+                      <span>Montaigne Sophie 14:19</span>
+                      <p>Bonjour Monsieur le Coach</p>
+                    </div>
+                  </div>
+                  <div class="message d-flex">
+                    <div>
+                      <span>Montaigne Sophie 14:19</span>
+                      <p>Bonjour Monsieur le Coach</p>
+                    </div>
+                    <img src="./img/nav-icon/nav-profile-icon.png" alt="img">
+                  </div>
+              </div>
+              <div class="search mt-2">
+                <div class="input">
+                  <input type="text" placeholder="Saisir le message ici...">
+                  <i class="fa-solid fa-paper-plane"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- valider part html end  -->
+
+  <!--  bootstrap script  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
